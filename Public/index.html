@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battle Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+
+  <body>
+    <div id="container">
+      <!-- Host Login Section -->
+      <section id="host-login" class="login-section">
+        <h2>Host Login</h2>
+        <input type="password" id="passcode-input" placeholder="Enter Passcode" />
+        <button id="host-button" class="btn">Join as Host</button>
+      </section>
+
+      <!-- Team Login Section -->
+      <section id="team-login" class="login-section">
+        <h2>Join as a Team</h2>
+        <input type="text" id="team-name" placeholder="Enter Your Team Name" />
+        <input type="text" id="team-password" placeholder="Enter Your password" />
+        <button id="team-button" class="btn">Join as Team</button>
+      </section>
+
+      <!-- Host Dashboard -->
+      <section id="host-dashboard" class="dashboard">
+        <h2>Host Dashboard</h2>
+        <h3>Leaderboard</h3>
+        <div id="leaderboard"></div>
+        <textarea id="message-box" placeholder="Message to teams..."></textarea>
+        <button id="start-game-button" class="btn">Start Game</button>
+      </section>
+
+      <!-- Team Dashboard -->
+      <section id="team-dashboard" class="dashboard">
+        <h2>Team Dashboard</h2>
+        <div>
+          <span>Health:</span>
+          <div id="team-health-bar" class="health-bar"></div>
+        </div>
+        <div id="teammates-health"></div>
+        <select id="team-select"></select>
+        <div id="attack-buttons"><button id="attack-button" class="btn">Attack</button></div>
+
+        <p>Connected Teams: <span id="connected-teams">0</span></p>
+      </section>
+
+      <div id="game-status"></div>
+    </div>
+
+    <script src="client.js"></script>
+    <script>
+      VANTA.DOTS({
+        el: "body",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+      });
+    </script>
+  </body>
+</html>
