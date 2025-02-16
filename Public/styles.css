@@ -1,0 +1,153 @@
+/* General Styles */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #0b0c10;
+  color: #f2f7f6;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+h2 {
+  color: #45a29e;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+/* Form Sections */
+.login-section,
+.dashboard {
+  background-color: #1f2833;
+  border: 2px solid #45a29e;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.dashboard {
+  display: none;
+}
+
+/* Input Fields */
+input[type="password"],
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  border: 2px solid #45a29e;
+  border-radius: 5px;
+  background-color: #0b0c10;
+  color: #66fcf1;
+  font-size: 1em;
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+input[type="password"]::placeholder,
+input[type="text"]::placeholder,
+textarea::placeholder {
+  color: #45a29e;
+  opacity: 0.8;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #66fcf1;
+  color: #0b0c10;
+  padding: 12px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #45a29e;
+  color: #fff;
+}
+
+/* Error Message */
+.error {
+  color: #f44336;
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+
+/* Health Bar */
+.health-bar {
+  width: 100%; /* Adjust this width dynamically based on health percentage in JavaScript */
+  height: 20px;
+  background: linear-gradient(to right, #45a29e, #66fcf1);
+  border-radius: 10px;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: width 0.5s ease;
+}
+
+/* Lists and Dropdown */
+ul,
+select {
+  color: #66fcf1;
+  background-color: #1f2833;
+  border: 2px solid #45a29e;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.btn:active {
+  transform: scale(0.98); /* Slightly scale down the button when clicked */
+}
+.success {
+  color: #4caf50;
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+input[type="password"]:focus,
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #66fcf1;
+  box-shadow: 0 0 10px #66fcf1;
+}
+select:hover,
+input[type="password"]:hover,
+input[type="text"]:hover {
+  background-color: #0e1012; /* A slightly lighter dark shade for hover */
+}
+.btn.disabled,
+.btn:disabled {
+  background-color: #a0aec0; /* Grey out the button when disabled */
+  cursor: not-allowed;
+}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  #container {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
