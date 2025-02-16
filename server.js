@@ -149,6 +149,9 @@ io.on("connection", (socket) => {
     console.log({ history: JSON.stringify(history) });
   });
 });
+app.get("/:universalURL", (req, res) => {
+   res.send("404 URL NOT FOUND");
+});
 server.listen(3001, () => {
   console.log("Server is running on http://localhost:3001");
 });
